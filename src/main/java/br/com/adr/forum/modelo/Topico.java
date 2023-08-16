@@ -1,4 +1,4 @@
-package br.com.alura.forum.modelo;
+package br.com.adr.forum.modelo;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -29,12 +29,6 @@ public class Topico {
 	private Curso curso;
 	@OneToMany(mappedBy = "topico")
 	private List<Resposta> respostas = new ArrayList<>();
-
-	public Topico(String titulo, String mensagem, Curso curso) {
-		this.titulo = titulo;
-		this.mensagem = mensagem;
-		this.curso = curso;
-	}
 
 	@Override
 	public int hashCode() {

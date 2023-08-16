@@ -1,4 +1,4 @@
-package br.com.alura.forum.modelo;
+package br.com.adr.forum.modelo;
 
 import java.time.LocalDateTime;
 
@@ -14,8 +14,8 @@ public class Resposta {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String mensagem;
-	private Topico topico;
 	@ManyToOne
+	private Topico topico;
 	private LocalDateTime dataCriacao = LocalDateTime.now();
 	@ManyToOne
 	private Usuario autor;
